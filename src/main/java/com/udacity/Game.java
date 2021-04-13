@@ -150,7 +150,43 @@ public class Game {
      */
     public String checkGameWinner(char [][]grid){
         String result = "None";
-        //Student code goes here ...
+        //Vertical
+        if (grid[0][0] == 'x' && grid[0][1] == 'x' && grid[0][2] == 'x')
+            result = "X wins";
+        if (grid[0][0] == 'o' && grid[0][1] == 'o' && grid[0][2] == 'o')
+            result = "O wins";
+        if (grid[1][0] == 'x' && grid[1][1] == 'x' && grid[1][2] == 'x')
+            result = "X wins";
+        if (grid[1][0] == 'o' && grid[1][1] == 'o' && grid[1][2] == 'o')
+            result = "O wins";
+        if (grid[2][0] == 'x' && grid[2][1] == 'x' && grid[2][2] == 'x')
+            result = "X wins";
+        if (grid[2][0] == 'o' && grid[2][1] == 'o' && grid[2][2] == 'o')
+            result = "O wins";
+        //Horizontal
+        if (grid[0][0] == 'x' && grid[1][0] == 'x' && grid[2][0] == 'x')
+            result = "X wins";
+        if (grid[0][0] == 'o' && grid[1][0] == 'o' && grid[2][0] == 'o')
+            result  = "O wins";
+        if (grid[0][1] == 'x' && grid[1][1] == 'x' && grid[2][1] == 'x')
+            result = "X wins";
+        if (grid[0][1] == 'o' && grid[1][1] == 'o' && grid[2][1] == 'o')
+            result  = "O wins";
+        if (grid[0][2] == 'x' && grid[1][2] == 'x' && grid[2][2] == 'x')
+            result = "X wins";
+        if (grid[0][2] == 'o' && grid[1][2] == 'o' && grid[2][2] == 'o')
+            result  = "O wins";
+        //Diagonal
+        if (grid[0][0] == 'x' && grid[1][1] == 'x' && grid[2][2] == 'x')
+            result = "X wins";
+        if (grid[0][0] == 'o' && grid[1][1] == 'o' && grid[2][2] == 'o')
+            result = "O wins";
+        if (grid[2][0] == 'x' && grid[1][1] == 'x' && grid[0][2] == 'x')
+            result = "X wins";
+        if (grid[2][0] == 'o' && grid[1][1] == 'o' && grid[0][2] == 'o')
+            result = "O wins";
+        if ((grid[0][0] == 'x' || grid[0][0] == 'o') && (grid[1][0] == 'x' || grid[1][0] == 'o') && (grid[2][0] == 'x' || grid[2][0] == 'o') && (grid[0][1] == 'x' || grid[0][1] == 'o') && (grid[1][1] == 'x' || grid[1][1] == 'o') && (grid[2][1] == 'x' || grid[2][1] == 'o') && (grid[0][2] == 'x' || grid[0][2] == 'o') && (grid[1][2] == 'x' || grid[1][2] == 'o') && (grid[2][2] == 'x' || grid[2][2] == 'o'))
+        result = "Tie";
         return result;
     }
 
